@@ -14,8 +14,10 @@ const Card = ({ text, icon, number, gain, altText }) => {
   return (
     <div className='card flex justify-between flex-wrap w-1/4 p-8 m-4'>
       <div className='flex flex-col justify-between'>
-        <p className='mb-4 font-bold text-dgb'>{text}</p>
-        <p className='mt-4 text-3xl font-bold'>{displayNumber(number)}</p>
+        <p className='mb-4 font-bold text-dgb card__title'>{text}</p>
+        <p className='mt-4 text-3xl font-bold card__number'>
+          {displayNumber(number)}
+        </p>
       </div>
       <div className='flex flex-col justify-between'>
         <SocialIcon src={icon} altText={altText} />

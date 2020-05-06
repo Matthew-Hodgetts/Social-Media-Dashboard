@@ -15,6 +15,9 @@ body {
   }
 }
 
+main {
+  transform: translateY(-100px);
+}
 .overview__title {
   color: hsl(228, 12%, 44%);
 }

@@ -10,3 +10,16 @@
     color: red;
   }
 }
+
+.App--darkMode {
+  .card {
+    background-color: hsl(228, 28%, 20%);
+  }
+
+  .card__title {
+    color: hsl(228, 34%, 66%);
+  }
+  .card__number {
+    color: #fff;
+  }
+}

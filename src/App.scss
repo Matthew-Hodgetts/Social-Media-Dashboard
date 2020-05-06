@@ -1,0 +1,6 @@
+.App {
+  min-height: 100vh;
+  &--darkMode {
+    background-color: hsl(230, 17%, 14%);
+  }
+}

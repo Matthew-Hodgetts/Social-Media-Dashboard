@@ -1,5 +1,6 @@
 .header {
   background-color: hsl(225, 100%, 98%);
+  padding-bottom: 8rem;
 }
 
 .header__title {
@@ -8,4 +9,18 @@
 
 .header__subtitle {
   color: hsl(228, 12%, 44%);
+}
+
+.App--darkMode {
+  .header {
+    background-color: hsl(232, 19%, 15%);
+  }
+
+  .header__title {
+    color: #fff;
+  }
+
+  .header__subtitle {
+    color: hsl(228, 34%, 66%);
+  }
 }

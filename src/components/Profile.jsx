@@ -9,7 +9,7 @@ const Profile = ({ img: src, altText, username, followers, name, gain }) => {
       className={`profile flex-1 flex justify-center flex-col items-center p-5 m-4 ${name.toLowerCase()}`}>
       <div className='flex items-center'>
         <SocialIcon src={src} altText={altText} />
-        <p className=' ml-3 text-sm'>{username}</p>
+        <p className='profile__username ml-3 text-sm'>{username}</p>
       </div>
       <p className='profile__follower-count text-5xl'>{followers}</p>
       <p className='profile__follower-text mb-5'>
