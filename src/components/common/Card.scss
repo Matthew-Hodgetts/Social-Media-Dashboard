@@ -1,0 +1,12 @@
+.card {
+  background-color: hsl(227, 47%, 96%);
+  border-radius: 0.375rem;
+}
+
+.card__gain {
+  color: limegreen;
+  font-weight: 700;
+  &--negative {
+    color: red;
+  }
+}

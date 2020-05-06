@@ -1,45 +1,22 @@
 import React from 'react';
 import './Profile.scss';
-import Icon from './common/Icon';
+import ArrowIcon from './common/ArrowIcon';
+import SocialIcon from './common/SocialIcon';
 
-import Facebook from '../images/icon-facebook.svg';
-import Twitter from '../images/icon-twitter.svg';
-import Instagram from '../images/icon-instagram.svg';
-import Youtube from '../images/icon-youtube.svg';
-
-const determineIcon = (name) => {
-  let profileName = name.toLowerCase();
-  if (profileName === 'youtube') {
-    return Youtube;
-  }
-  if (profileName === 'twitter') {
-    return Twitter;
-  }
-  if (profileName === 'instagram') {
-    return Instagram;
-  }
-  if (profileName === 'facebook') {
-    return Facebook;
-  }
-};
-const Profile = ({ data: profile }) => {
+const Profile = ({ img: src, altText, username, followers, name, gain }) => {
   return (
     <div
-      className={`profile flex-1 flex justify-center flex-col items-center p-5 m-4 ${profile.name.toLowerCase()}`}>
+      className={`profile flex-1 flex justify-center flex-col items-center p-5 m-4 ${name.toLowerCase()}`}>
       <div className='flex items-center'>
-        <img
-          classname='profile__social-icon'
-          src={determineIcon(profile.name)}
-          alt={`${profile.name} icon`}
-        />
-        <p className=' ml-3 text-sm'>{profile.username}</p>
+        <SocialIcon src={src} altText={altText} />
+        <p className=' ml-3 text-sm'>{username}</p>
       </div>
-      <p className='profile__follower-count text-5xl'>{profile.followers}</p>
+      <p className='profile__follower-count text-5xl'>{followers}</p>
       <p className='profile__follower-text mb-5'>
-        {profile.name.toLowerCase() === 'youtube' ? 'Subscribers' : 'Followers'}
+        {name === 'youtube' ? 'Subscribers' : 'Followers'}
       </p>
 
-      <Icon number={profile.gain} textAfter='Today' />
+      <ArrowIcon numValue={gain} textAfter='Today' />
     </div>
   );
 };
